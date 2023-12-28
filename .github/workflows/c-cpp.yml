@@ -16,7 +16,7 @@ jobs:
     - name: istall
       run: sudo apt-get install gcc-arm-linux-gnueabi gcc-arm-linux-gnueabihf gcc-arm-none-eabi
     - name: pacextractor
-      run: arm-linux-gnueabi-gcc -march=armv7-a -static -o pacextractor pacextractor.c
+      run: arm-linux-gnueabi-gcc -march=armv7-a -static -s -o pacextractor pacextractor.c
     - uses: actions/upload-artifact@v4
       with:
          name: pacextractor
