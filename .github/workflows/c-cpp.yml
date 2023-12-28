@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: install libs
-      run: sudo apt-get install ia32-libs
+      run: sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0
     - name: make
       run: make pacextractor
     - name: pacextractor
