@@ -13,6 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - name: install libs
+      run: sudo apt-get install ia32-libs
     - name: make
       run: make pacextractor
     - name: pacextractor
