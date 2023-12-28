@@ -13,12 +13,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: install libs
-      run: sudo apt-get install lib32z1
-    - name: make
-      run: make pacextractor
     - name: pacextractor
-      run: arm-linux-gnueabi-gcc -static -o pacextractor pacextractor.c
+      run: gcc -march=armv7-a -static -o pacextractor pacextractor.c
     - uses: actions/upload-artifact@v4
       with:
          name: pacextractor
