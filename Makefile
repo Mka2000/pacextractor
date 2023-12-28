@@ -3,7 +3,7 @@ CFLAGS=-g -ggdb -Wall
 #LDLIBS=-l
 
 all: pacextractor
-
+pacextrator: arm-linux-gnueabi-gcc -static -o pacextractor pacextractor.c
 version.h:
 	if [ ! -f version.h ]; then \
 	if [ -d .git ]; then \
